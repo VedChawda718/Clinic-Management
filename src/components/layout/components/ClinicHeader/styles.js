@@ -5,5 +5,5 @@ export const HeaderContainer = styled(Box)(() => ({
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-  padding: "16px",
+  padding: "12px 16px",
 }));

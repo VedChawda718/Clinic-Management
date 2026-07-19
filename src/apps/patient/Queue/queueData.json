@@ -1,0 +1,15 @@
+{
+  "title": "Live Queue Status",
+  "subtitle": "Check and add yourself in the queue",
+  "actionLabel": "Join The Queue",
+  "queue": [
+    { "id": 4, "tokenNo": "04", "status": "On Going", "type": "ongoing" },
+    { "id": 5, "tokenNo": "05", "status": "Up Next", "type": "up_next" },
+    { "id": 6, "tokenNo": "06", "status": "Waiting...", "type": "waiting" },
+    { "id": 7, "tokenNo": "07", "status": "Waiting...", "type": "waiting" },
+    { "id": 8, "tokenNo": "08", "status": "Waiting...", "type": "waiting" },
+    { "id": 9, "tokenNo": "09", "status": "Waiting...", "type": "waiting" },
+    { "id": 10, "tokenNo": "10", "status": "Waiting...", "type": "waiting" },
+    { "id": 11, "tokenNo": "11", "status": "Waiting...", "type": "waiting" }
+  ]
+}

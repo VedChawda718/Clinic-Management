@@ -16,6 +16,8 @@ const contactItems = [
 
 const ClinicFooter = () => {
   return (
+    <>
+    <Divider/>
     <FooterContainer component="footer">
       <ClinicLogo
         title={footerData.clinicName}
@@ -57,6 +59,7 @@ const ClinicFooter = () => {
         </Typography>
       </MoreInfo>
     </FooterContainer>
+    </>
   );
 };
 

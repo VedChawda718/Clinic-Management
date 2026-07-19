@@ -21,9 +21,9 @@ const HomeHeader = ({ welcomeText, title, description }) => {
       >
         {title}
       </Typography>
-      {/* <Typography variant="body2" color="textSecondary">
+      <Typography variant="caption" color="textSecondary">
         {description}
-      </Typography> */}
+      </Typography>
     </Box>
   );
 };
