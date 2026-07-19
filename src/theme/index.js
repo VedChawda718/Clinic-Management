@@ -2,7 +2,7 @@ import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
-    mode: "dark",
+    // mode: "dark",
   },
   shape: {
     borderRadius: "4px",
@@ -15,6 +15,9 @@ const theme = createTheme({
     },
     body2: {
       fontWeight: 500,
+    },
+    caption: {
+      fontWeight:500,
     },
     button: {
       textTransform: "none",

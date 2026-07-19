@@ -39,26 +39,6 @@ const DataTableHeader = ({
           {subtitle}
         </Typography>
       )}
-
-      {showAction && actionLabel && (
-        <Button
-          variant="contained"
-          endIcon={actionIcon}
-          onClick={onAction}
-          sx={(theme) => ({
-            borderRadius: "8px",
-            px: 3,
-            py: 1,
-            fontWeight: 600,
-            boxShadow: "none",
-            "&:hover": {
-              boxShadow: theme.shadows[2],
-            },
-          })}
-        >
-          {actionLabel}
-        </Button>
-      )}
     </Box>
   );
 };

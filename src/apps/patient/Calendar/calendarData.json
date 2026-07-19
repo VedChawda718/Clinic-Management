@@ -1,0 +1,27 @@
+{
+  "title": "Monthly Calendar",
+  "subtitle": "Choose a month to see the doctor's schedule",
+  "months": [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ],
+  "defaultMonth": "April",
+  "year": "2026",
+  "columns": [
+    { "key": "date", "label": "Date", "type": "date" },
+    { "key": "morning", "label": "Morning", "type": "status" },
+    { "key": "evening", "label": "Evening", "type": "status" }
+  ],
+  "schedule": [
+    { "id": 1, "date": "1, Mon", "morning": "Open", "evening": "Closed", "type": "ongoing" },
+    { "id": 2, "date": "2, Tue", "morning": "Open", "evening": "Open", "type": "regular" },
+    { "id": 3, "date": "3, Wed", "morning": "Open", "evening": "Closed", "type": "regular" },
+    { "id": 4, "date": "4, Thu", "morning": "Open", "evening": "Open", "type": "regular" },
+    { "id": 5, "date": "5, Fri", "morning": "Open", "evening": "Open", "type": "regular" },
+    { "id": 6, "date": "6, Sat", "morning": "Open", "evening": "Closed", "type": "regular" },
+    { "id": 7, "date": "7, Sun", "morning": "Open", "evening": "Open", "type": "regular" },
+    { "id": 8, "date": "8, Mon", "morning": "Open", "evening": "Closed", "type": "regular" },
+    { "id": 9, "date": "9, Tue", "morning": "Open", "evening": "Open", "type": "regular" },
+    { "id": 10, "date": "10, Wed", "morning": "N/A", "evening": "N/A", "type": "regular" }
+  ]
+}

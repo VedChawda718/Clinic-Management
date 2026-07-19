@@ -31,10 +31,10 @@ const Queue = () => {
         data={queueData.queue}
         actionLabel={queueData.actionLabel}
         onAction={handleJoinQueue}
-        columns={["Token No.", "Status"]}
-        leftKey="tokenNo"
-        rightKey="status"
-        typeKey="type"
+        columns={[
+          { key: "tokenNo", label: "Token No.", type: "text" },
+          { key: "status", label: "Status", type: "status" },
+        ]}
       />
 
       {/* Snackbar notification on joining */}

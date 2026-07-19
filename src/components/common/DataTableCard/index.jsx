@@ -12,21 +12,15 @@ const DataTableCard = ({
   showAction = true,
   onRowClick,
   headerIcon,
-  columns = ["Token No.", "Status"],
-  leftKey = "tokenNo",
-  rightKey = "status",
-  typeKey = "type",
+  columns = [],
   renderRow,
   sx = {},
 }) => {
-  const leftColLabel = Array.isArray(columns) ? columns[0] : "Token No.";
-  const rightColLabel = Array.isArray(columns) ? columns[1] : "Status";
-
   return (
     <Paper
       elevation={0}
       sx={(theme) => ({
-        borderRadius: "16px",
+        borderRadius: theme.shape.card,
         border: `1px solid ${theme.palette.divider}`,
         overflow: "hidden",
         backgroundColor: theme.palette.background.paper,
@@ -41,8 +35,7 @@ const DataTableCard = ({
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              px: 2.5,
-              py: 2,
+              p: 2,
             }}
           >
             <Typography variant="body2" sx={{ fontWeight: 600 }}>
@@ -55,39 +48,38 @@ const DataTableCard = ({
         </>
       )}
 
-      {/* Table Column Headers */}
-      {columns && columns.length > 0 && (
+      {/* Dynamic Table Column Headers */}
+      {columns.length > 0 && (
         <>
           <Box
             sx={{
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              px: 2.5,
-              py: 1.5,
+              p: 2,
+              gap: 2,
             }}
           >
-            <Typography
-              variant="subtitle2"
-              color="textSecondary"
-              sx={{ fontWeight: 600 }}
-            >
-              {leftColLabel}
-            </Typography>
-            <Typography
-              variant="subtitle2"
-              color="textSecondary"
-              sx={{ fontWeight: 600 }}
-            >
-              {rightColLabel}
-            </Typography>
+            {columns.map((col) => (
+              <Typography
+                key={col.key}
+                variant="body2"
+                color="textSecondary"
+                sx={{
+                  flex: 1,
+                  fontWeight: 600,
+                }}
+              >
+                {col.label}
+              </Typography>
+            ))}
           </Box>
           <Divider />
         </>
       )}
 
       {/* Items List */}
-      <Box sx={{ px: 1, py: 1 }}>
+      <Box>
         {data.map((item, index) => {
           if (renderRow) {
             return renderRow(item, index);
@@ -98,9 +90,7 @@ const DataTableCard = ({
               item={item}
               isEven={index % 2 === 1}
               onRowClick={onRowClick}
-              leftKey={leftKey}
-              rightKey={rightKey}
-              typeKey={typeKey}
+              columns={columns}
             />
           );
         })}
@@ -115,10 +105,7 @@ const DataTableCard = ({
           onClick={onAction}
           sx={{
             borderRadius: 0,
-            py: 1.8,
-            fontWeight: 600,
-            fontSize: "1rem",
-            boxShadow: "none",
+            padding:"12px"
           }}
         >
           {actionLabel}
