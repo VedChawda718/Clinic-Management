@@ -1,0 +1,51 @@
+{
+  "header": {
+    "welcomeText": "Welcome",
+    "title": "Check Doctor’s Availability",
+    "description": "Check the slots available and join the queue."
+  },
+  "todaySlots": {
+    "title": "Today’s Slots",
+    "date": "11, April 2026",
+    "buttonText": "View Calendar",
+    "buttonUrl": "/app/calendar",
+    "slots": [
+      {
+        "id": "morning",
+        "name": "Morning",
+        "timeRange": "10:00 AM - 1:00 PM",
+        "status": "Open",
+        "isOpen": true,
+        "type": "morning"
+      },
+      {
+        "id": "evening",
+        "name": "Evening",
+        "timeRange": "5:00 PM - 9:00 PM",
+        "status": "Closed",
+        "isOpen": false,
+        "type": "evening"
+      }
+    ]
+  },
+  "liveQueueStatus": {
+    "title": "Live Queue Status",
+    "activeSlot": "Evening Slot",
+    "buttonText": "View",
+    "buttonUrl": "/app/queue",
+    "queueItems": [
+      {
+        "id": "waiting",
+        "title": "Waiting",
+        "value": "7",
+        "type": "waiting"
+      },
+      {
+        "id": "token",
+        "title": "Current Token",
+        "value": "04",
+        "type": "token"
+      }
+    ]
+  }
+}
